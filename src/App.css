@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Nova+Square&family=Poppins:wght@300;400;600;700;800&family=Roboto:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --font-roboto: "Roboto Slab", serif;
+/**  --font-raleway: "Raleway", sans-serif; **/
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: rgb(17, 17, 17);;
+}
+
+.app {
+  padding: 2rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.titleSearch{
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+
+color: whitesmoke;
+font-size: 5rem;
+
+  /**
+  
+  letter-spacing: 0.9px;
+  background: linear-gradient(
+    90deg,
+    rgba(249, 211, 180, 1) 0%,
+    rgba(249, 211, 180, 0) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: fit-content;|
+  **/
+}
+
+.tv{
+  color: red;
+}
+
+.search {
+ /**
+ width: 71%;
+  margin: 4rem 0 2rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 1.5rem 1.75rem;
+  border-radius: 3rem;
+  background: #1f2123;
+  -webkit-box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
+  box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
+  **/
+  
+  margin: 3rem;
+  margin-left: 12rem;
+  background-color: none;
+  border: 2px solid #e9e9ec;
+  border-radius: 5px;
+  color: #fff;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+ 
+  
+
+}
+
+.search input {
+  flex: 1;
+  border: none;
+  font-size: 1.5rem;
+  font-family: var(--font-raleway);
+  font-weight: 500;
+  padding-right: 2rem;
+  position: relative;
+  left: 30px;
+  outline: none;
+  color: #a1a1a1;
+  background: none;
+  margin-bottom: 2px;
+  width: 40rem;
+}
+
+
+.search img {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.fa-magnifying-glass{
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.fa-magnifying-glass:hover{
+  color: blue;
+}
+
+.search input::placeholder{
+  position: relative;
+  bottom: 10px;
+}
+
+ .search button {
+  padding: 20px 40px;
+  border-radius: 0.5rem;
+  margin-left: 15px;
+  color: #a1a1a1;
+  font-family: var(--font-raleway);
+  font-weight: 900;
+  letter-spacing: 0.75px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  background: #1f2123;
+  -webkit-box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
+  box-shadow: 5px 5px 7px #1c1d1f, -5px -5px 7px #222527;
+} 
+
+.empty {
+  width: 100%;
+  margin-top: 3rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.empty h2 {
+  font-size: 1.25rem;
+  color: #f9d3b4;
+  font-family: var(--font-raleway);
+}
+
+.container {
+  width: 100%;
+  margin-top: 3rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.movie {
+  width: 310px;
+  height: 460px;
+  margin: 1.5rem;
+
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: none;
+
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
+  box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
+}
+
+.movie div:nth-of-type(1) {
+  position: absolute;
+  padding: 16px;
+  width: 100%;
+  opacity: 0;
+  top: 0;
+  color: #f0f0f0;
+}
+
+.movie:hover {
+  box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
+  transform: scale(1.05, 1.05);
+}
+
+.movie div:nth-of-type(2) {
+  width: 100%;
+  height: 100%;
+}
+
+.movie div:nth-of-type(2) img {
+  height: 100%;
+  width: 100%;
+}
+
+.movie div:nth-of-type(3) {
+  z-index: 2;
+  background-color: #461257;
+  padding: 16px 24px 24px 24px;
+/** old color  #343739 **/
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.movie div:nth-of-type(3) span {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: 500;
+  color: #f0f0f0;
+}
+
+.movie div:nth-of-type(3) h3 {
+  margin-top: 5px;
+  font-family: 'Poppins', sans-serif;
+  color: #f0f0f0;
+}
+/** original color f9d3b4 **/
+.movie:hover div:nth-of-type(2) {
+  height: 100%;
+  opacity: 0.3;
+}
+
+.movie:hover div:nth-of-type(3) {
+  background-color: transparent;
+}
+
+.movie:hover div:nth-of-type(1) {
+  opacity: 1;
+}
+
+/** Start of Media Query **/
+
+@media screen and (max-width: 1559px) {
+  .search input {
+    position: relative;
+    right: 110px;
+    height: 20px;
+    width: 30rem;
+  }
+
+  input::placeholder{
+    position: relative;
+    bottom: 2px;
+  }
+  
+  h1{
+    position: relative;
+    left: 60px;
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 1245px) {
+  .app {
+    padding: 4rem 2rem;
+  }
+
+  /**
+  .titleSearch{
+    display: flex;
+    flex-direction: column;
+  }
+  **/
+
+  .search {
+    position: relative;
+    left: 2px;
+    width: 600px;
+    width: 100%;
+  }
+
+  .fa-magnifying-glass{
+    position: relative;
+    left: 250px;
+    bottom: 30px;
+  }
+
+  .search input {
+    font-size: 1rem;
+    background-color: transparent;
+  }
+
+  .search img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .movie{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 1137px){
+
+    h1{
+      position: relative;
+      left: 8px;
+    }
+
+  .search {
+    margin: auto;
+    position: relative;
+    width: 650px;
+    
+  }
+
+  .fa-magnifying-glass{
+    position: relative;
+    left: 115px;
+    top: 2px;
+  }
+
+  .titleSearch{
+    display: flex;
+    flex-direction: column;
+  }
+
+
+}
+
+@media screen and (max-width: 779px){
+
+  .search{
+    width: 480px;
+    padding: 0;
+  }
+
+  .fa-magnifying-glass{
+    position: relative;
+    left: 27rem;
+
+  }
+
+}
+
+input::placeholder{
+  position: relative;
+  top: 10px;
+}
+
+@media screen and (max-width: 480px) {
+  .app {
+    padding: 2rem 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .titleSearch{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .search{
+    position: relative;
+    right: 3px;
+    margin: 8px;
+    margin-left: 15px;
+    width: 410px;
+    padding: 0.3rem 2rem; 
+  }
+
+
+
+  .fa-magnifying-glass{
+    position: relative;
+    top: 4px;
+    left: 130px; 
+  }
+
+  .container {
+    margin-top: 2rem;
+  }
+
+  .movie {
+    width: 100%;
+    margin: 1rem;
+  }
+}
